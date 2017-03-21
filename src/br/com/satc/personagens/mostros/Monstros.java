@@ -11,14 +11,17 @@ package br.com.satc.personagens.mostros;
  */
 public abstract class Monstros extends br.com.satc.personagens.Personagem implements IMonstro{
     
-    private int drop, skillpassiva, skillativa;;
+    private int drop, skillpassiva, skillativa, exp;
+    private String descricao;
     
-    public Monstros(int drop, int skillpassiva, int skillativa, int nivel,String nome, int forca, int agilidade, int vitalidade, int inteligencia, int destreza, int sorte) {
+    public Monstros(int exp,String descricao,int drop, int skillpassiva, int skillativa, int nivel,String nome, int forca, int agilidade, int vitalidade, int inteligencia, int destreza, int sorte) {
         super(nome, forca, agilidade, vitalidade, inteligencia, destreza, sorte);
         this.setNivel(nivel);
         this.setDrop(drop);
         this.setSkillativa(skillativa);
         this.setSkillpassiva(skillpassiva);
+        this.setExp(exp);
+        this.setDescricao(descricao);
     }
 
     /**
@@ -61,6 +64,34 @@ public abstract class Monstros extends br.com.satc.personagens.Personagem implem
      */
     public void setSkillativa(int skillativa) {
         this.skillativa = skillativa;
+    }
+
+    /**
+     * @return the descricao
+     */
+    public String getDescricao() {
+        return descricao;
+    }
+
+    /**
+     * @param descricao the descricao to set
+     */
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    /**
+     * @return the exp
+     */
+    public int getExp() {
+        return exp;
+    }
+
+    /**
+     * @param exp the exp to set
+     */
+    public void setExp(int exp) {
+        this.exp = exp;
     }
     
     
